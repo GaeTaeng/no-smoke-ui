@@ -1,13 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'; 
+import Header from './Components/Header/Header';
+import './index.css'; 
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const rootElement = document.getElementById('root');
+if (!rootElement) throw new Error('Failed to find the root element');
+const root = ReactDOM.createRoot(rootElement);
+
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+    <Header >
+        <Routes>
+          <Route path="/" >
+            <Route path ="" element={<div>main</div>} />
+            <Route path ="profile"  element={<div>B</div>}  />
+            <Route path ="profile/:userId"  element={<div>C</div>} 
+              loader={({ params }) => {
+                console.log(params.userId); // "hotspur"
+            }} />
+          </Route>
+          <Route path ="/profile"  element={<div>B</div>}  />
+          
+        </Routes>
+      </Header>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
