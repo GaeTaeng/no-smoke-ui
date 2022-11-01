@@ -15,7 +15,7 @@ root.render(
     <Header >
         <Routes>
           <Route path="/" >
-            <Route path ="" element={<div>유진이 금연사이트</div>} />
+            <Route path ="" element={<div>금연사이트</div>} />
             <Route path ="profile"  element={<div>ㄱ ㄱ ㄱ ㄱ </div>}  />
             <Route path ="profile/:userId"  element={<div>ㄲㄱ</div>} 
               loader={({ params }) => {
