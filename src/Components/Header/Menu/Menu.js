@@ -17,7 +17,7 @@ const Menu = () => {
             <div className="container text-center">
                 <div className="row">
                     {MENU_LIST.map((menu, idx) => {
-                        return <div className={`col menu ${idx_menu === idx ? "select" : ""}`} onClick={() => handleClickMenu(idx)}>
+                        return <div key={idx} className={`col menu ${idx_menu === idx ? "select" : ""}`} onClick={() => handleClickMenu(idx)}>
                                     {menu.txt}
                                 </div> 
                     })} 

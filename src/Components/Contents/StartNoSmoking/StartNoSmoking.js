@@ -12,12 +12,12 @@ const DATA_LIST = [
 
 export default function StartNoSmoking({ children }) { 
     return (
-        <div class="container text-center">
-            <div class="row row-cols-2">
-                {DATA_LIST.map(data => {
-                    return <div>
-                            <div class="col col-md-4 title">{data.title}</div>
-                                <div class="col col-md-8 content">{data.data}</div>
+        <div className="container text-center">
+            <div className="row row-cols-2">
+                {DATA_LIST.map((data, idx) => {
+                    return <div key={idx} >
+                            <div className="col col-md-4 title">{data.title}</div>
+                                <div className="col col-md-8 content">{data.data}</div>
                                 <hr/>
                             </div>
                 })} 
