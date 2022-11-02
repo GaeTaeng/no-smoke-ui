@@ -1,16 +1,29 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react"; 
+import "./Menu.css"
+
+const MENU_LIST = [
+    {txt : "Board", url : "board"},
+    {txt : "Home", url : ""},
+    {txt : "Setting", url : "setting"},
+]
 
 const Menu = () => {
-    return (
-        <div>
-            <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/profile/234">Profile</Link></li>
-                {/* <li><Link to="/about/foo">About Foo</Link></li> */}
-            </ul>
-            <hr/>
-        </div>
+    const [idx_menu, setIdxMenu] = useState(1);
+
+    function handleClickMenu(idx) { 
+        setIdxMenu(idx)
+    }
+    return ( 
+            <div className="container text-center">
+                <div className="row">
+                    {MENU_LIST.map((menu, idx) => {
+                        return <div className={`col menu ${idx_menu === idx ? "select" : ""}`} onClick={() => handleClickMenu(idx)}>
+                                    {menu.txt}
+                                </div> 
+                    })} 
+                    <hr/> 
+                </div>
+            </div> 
     );
   };
 
