@@ -1,0 +1,10 @@
+.col.menu {
+    cursor: pointer;
+    height : 46px;
+}
+.col.select {
+    border: 2px solid #1c90fb!important; 
+    border-radius: 8px!important;
+    outline: 0!important;
+    
+}

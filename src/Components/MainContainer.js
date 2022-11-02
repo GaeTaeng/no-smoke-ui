@@ -10,9 +10,11 @@ export default function MainContainer({ children }) {
              <Header >
                 <Menu />
              </Header>
+             
             <div>
                 {children}
             </div>
+
             <Footer>
                 <div>FOOTER</div>
             </Footer>
