@@ -3,6 +3,8 @@ import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import Menu from "./Header/Menu/Menu";
 
+import "./MainContainer.css"
+
 export default function MainContainer({ children }) {
     console.log("children : ", children)
     return (
@@ -11,7 +13,7 @@ export default function MainContainer({ children }) {
                 <Menu />
              </Header>
              
-            <div>
+            <div className="contents">
                 {children}
             </div>
 

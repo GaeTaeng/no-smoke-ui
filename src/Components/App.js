@@ -1,6 +1,7 @@
 import React from "react"; 
 import { BrowserRouter, Route, Routes } from "react-router-dom"; 
 import Contents from "./Contents/Contents";
+import StartNoSmoking from "./Contents/StartNoSmoking/StartNoSmoking";
 import MainContainer from "./MainContainer";
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
         <MainContainer >
             <Routes>
             <Route path="/" >
-                <Route path ="" element={<Contents />} />
+                <Route path ="" element={<StartNoSmoking />} />
                 <Route path ="profile"  element={<div>ㄱ ㄱ ㄱ ㄱ </div>}  />
                 <Route path ="profile/:userId"  element={<div>ㄲㄱ</div>} 
                 loader={({ params }) => {
