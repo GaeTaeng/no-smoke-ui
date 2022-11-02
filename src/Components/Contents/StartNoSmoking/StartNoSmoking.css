@@ -1,0 +1,11 @@
+.contents .col { 
+    height : 46px
+}
+
+.contents .title {
+    color: #1c90fb;
+}
+
+.contents .content {
+    color: black;
+}
