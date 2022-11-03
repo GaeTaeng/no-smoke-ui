@@ -1,4 +1,5 @@
 import React from "react";
+import Contents from "./Contents/Contents";
 import Footer from "./Footer/Footer"; 
 import Header from "./Header/Header";
 import Menu from "./Header/Menu/Menu";
@@ -13,9 +14,9 @@ export default function MainContainer({ children }) {
                 <Menu />
              </Header>
              
-            <div className="contents">
+            <Contents >
                 {children}
-            </div>
+            </Contents>
 
             <Footer>
                 <div>FOOTER</div>
