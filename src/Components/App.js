@@ -1,6 +1,5 @@
 import React from "react"; 
 import { BrowserRouter, Route, Routes } from "react-router-dom"; 
-import Contents from "./Contents/Contents";
 import StartNoSmoking from "./Contents/StartNoSmoking/StartNoSmoking";
 import MainContainer from "./MainContainer";
 
