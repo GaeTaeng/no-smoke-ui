@@ -20,8 +20,8 @@ const Menu = () => {
             <div className="container text-center">
                 <div className="row">
                     {MENU_LIST.map((menu, idx) => {
-                        return <Link to={menu.url} className={`col menu ${idx_menu === idx ? "select" : ""}`} onClick={() => handleClickMenu(idx)}>
-                                    <div key={idx}  >
+                        return <Link key={idx} to={menu.url} className={`col menu ${idx_menu === idx ? "select" : ""}`} onClick={() => handleClickMenu(idx)}>
+                                    <div   >
                                         {menu.txt}
                                     </div> 
                                     <hr/>       
