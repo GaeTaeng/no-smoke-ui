@@ -4,13 +4,12 @@ import BoardItem_v2 from "./BoardItem/BoardItem_v2";
 
 export default function BoardListManagement({ boardList }) { 
     return (
-        <div className="boardlistmanagement"> 
-        <hr/>
+        <div className="boardlistmanagement">  
         <div className="Description">
             아래와 같이 총 2가지 방법으로 개발 가능.(더있지만 귀찮..) <br /><br />
         </div>
         <div className="Description">
-            DIV BootStrap을 이용한 방식
+            1. DIV BootStrap을 이용한 방식
         </div>
         
         
@@ -24,7 +23,7 @@ export default function BoardListManagement({ boardList }) {
                 })}
             </div>  
             <div className="Description">
-                Table BootStrap을 이용한 방식
+                2. Table BootStrap을 이용한 방식
             </div>
             
             <table class="table">
