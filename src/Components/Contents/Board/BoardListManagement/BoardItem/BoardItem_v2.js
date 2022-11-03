@@ -1,7 +1,7 @@
 import React from "react";   
 export default function BoardItem_v2({ idx,data }) { 
     return (
-        <tr>
+        <tr key={idx+1}>
             <th scope="row">{idx+1}</th>
             <td>{data.title}</td>
             <td>{data.contents}</td>

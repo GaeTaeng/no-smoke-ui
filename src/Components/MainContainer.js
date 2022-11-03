@@ -6,8 +6,7 @@ import Menu from "./Header/Menu/Menu";
 
 import "./MainContainer.css"
 
-export default function MainContainer({ children }) {
-    console.log("children : ", children)
+export default function MainContainer({ children }) { 
     return (
         <div> 
              <Header >
