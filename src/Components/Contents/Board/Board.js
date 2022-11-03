@@ -22,7 +22,7 @@ export default function Board({ children }) {
     function handleCreateBoardItem() {
         //게시글 등록 페이지를 따로 구현하여(구조적으로 어떻게할지 물어보고싶으면 물어보세옹) 해당페이지에서 등록을 누를 시 해당 함수를 호출.
         //바로 생성 API 호출 (POST)
-        //이후 뭐 state의 뒤에 저장된 데이터를 갖다 붙이는게 아닌 getBoardList함수를 새로 호출 진행
+        //이후 뭐 state의 뒤에 저장된 데이터를 갖다 붙이는게 아닌 getBoardList함수를 새로 호출 진6행
 
     }
 
