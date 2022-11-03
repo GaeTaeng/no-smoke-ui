@@ -26,7 +26,7 @@ export default function BoardListManagement({ boardList }) {
                 2. Table BootStrap을 이용한 방식
             </div>
             
-            <table class="table">
+            <table className="table">
             <thead>
                 <tr>
                 <th scope="col">#</th>
@@ -39,7 +39,7 @@ export default function BoardListManagement({ boardList }) {
             <tbody>
                 {boardList.map((board, idx) => {
                         console.log("board : ", board)
-                        return <BoardItem_v2 idx={idx} data={board} />
+                        return <BoardItem_v2 key={idx} idx={idx} data={board} />
                     })}
             </tbody>
             </table>

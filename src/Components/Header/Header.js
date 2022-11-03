@@ -1,8 +1,6 @@
-import React from "react";
-import Menu from "./Menu/Menu";
+import React from "react"; 
 
-export default function Header({ children }) {
-    console.log("children : ", children)
+export default function Header({ children }) { 
     return (
         <div> 
                 {children} 
