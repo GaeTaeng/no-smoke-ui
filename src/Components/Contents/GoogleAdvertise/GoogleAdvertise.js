@@ -8,15 +8,15 @@ export default function GoogleAdvertise ({
   responsive = "",
   layoutKey = ""
 }) {
-  // useEffect(() => {
-  //   try {
-  //     (window.adsbygoogle = window.adsbygoogle || []).push({});
-  //     console.log("Advertise is pushed");
-  //   } catch (e) {
-  //     if (process.env.NODE_ENV !== "production")
-  //       console.error("AdvertiseError", e);
-  //   }
-  // }, []);
+  useEffect(() => {
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+      console.log("Advertise is pushed");
+    } catch (e) {
+      if (process.env.NODE_ENV !== "production")
+        console.error("AdvertiseError", e);
+    }
+  }, []);
   return (
     <ins
       className={className}
