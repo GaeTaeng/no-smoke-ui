@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import React, { useEffect, useState } from "react";  
-import BoardListManagement from "./BoardListManagement/BoardListManagement";
+import BoardListManagement from "./BoardListManagement/BoardListManagement"; 
 
 const BOARD_ITEM_INIT = {
     title : "",
@@ -9,8 +9,29 @@ const BOARD_ITEM_INIT = {
     insert_timestamp : dayjs(),
 }
 
+
+const DEV_TEST_DATA = [
+    {
+        title : "1번 게시글 입니닷",
+        contents : "1번 내용 입니닷",
+        create_user_name : "김태훈",
+        insert_timestamp : "2022년 11월 03일 11시 35분",
+    },
+    {
+        title : "2번 게시글 입니닷",
+        contents : "2번 내용 입니닷",
+        create_user_name : "정유진",
+        insert_timestamp : "2022년 11월 03일 16시 35분",
+    },
+    {
+        title : "3번 게시글 입니닷",
+        contents : "3번 내용 입니닷",
+        create_user_name : "이소현",
+        insert_timestamp : "2022년 11월 03일 18시 35분",
+    }
+]
 export default function Board({ children }) { 
-    const [boardList, setBoardList] = useState([]);
+    const [boardList, setBoardList] = useState(DEV_TEST_DATA);
 
 
     /** 최초진입, 상태업데이트(등록, 수정, 삭제 등) 발생 시 호출 진행 */
@@ -42,7 +63,7 @@ export default function Board({ children }) {
       }, []);
 
     return (
-        <div className="board">
+        <div className="board"> 
             <BoardListManagement boardList={boardList}/>    
         </div>
     )
