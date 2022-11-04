@@ -5,9 +5,9 @@ import "./StartNoSmoking.css"
 
 
 const DATA_LIST = [
-    {title : "금연 시작 일", data : dayjs().format("YYYY년 MM월 DD일")},
-    {title : "금연 기간", data : "0일"},
-    {title : "피우지 않은 담배", data : "10,000 개비"},
+    {title : "금연 시작 일", data : dayjs("2022/11/01").format("YYYY년 MM월 DD일")},
+    {title : "금연 기간", data : dayjs().diff(dayjs("2022/11/01"), "d")+ "일"},
+    {title : "피우지 않은 담배", data : `${dayjs().diff(dayjs("2022/11/01"), "d")*20} 개비`},
 ]
 
 export default function StartNoSmoking({ children }) { 

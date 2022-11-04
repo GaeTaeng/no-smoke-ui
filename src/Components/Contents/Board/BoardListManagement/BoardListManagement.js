@@ -37,8 +37,7 @@ export default function BoardListManagement({ boardList }) {
                 </tr>
             </thead>
             <tbody>
-                {boardList.map((board, idx) => {
-                        console.log("board : ", board)
+                {boardList.map((board, idx) => { 
                         return <BoardItem_v2 key={idx} idx={idx} data={board} />
                     })}
             </tbody>
