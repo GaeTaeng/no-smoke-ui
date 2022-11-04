@@ -1,4 +1,4 @@
-import React, { useState } from "react"; 
+import React, { useEffect, useState } from "react"; 
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import "./Menu.css"
@@ -17,6 +17,13 @@ const Menu = () => {
         setIdxMenu(idx) 
         console.log("location : ", location)
     }
+    useEffect(() => {
+        MENU_LIST.forEach((menu, idx) => {
+            if(location.pathname === "/".concat(menu.url)) {
+                setIdxMenu(idx);
+            }
+        })
+      }, []);
     return ( 
             <div className="container text-center">
                 <div className="row">
