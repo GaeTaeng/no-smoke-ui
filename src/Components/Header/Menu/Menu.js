@@ -25,7 +25,7 @@ const Menu = () => {
         })
       }, []);
     return ( 
-            <div className="container text-center">
+            <div className="container text-center menulist">
                 <div className="row">
                     {MENU_LIST.map((menu, idx) => {
                         return <Link key={idx} to={menu.url} className={`col menu ${idx_menu === idx ? "select" : ""}`} onClick={() => handleClickMenu(idx)}>

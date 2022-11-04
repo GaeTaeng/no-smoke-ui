@@ -1,11 +1,18 @@
-import React from "react"; 
+import React, { useEffect } from "react"; 
 import { BrowserRouter, Route, Routes } from "react-router-dom"; 
 import Board from "./Contents/Board/Board";
 import PlayGround from "./Contents/PlayGround/PlayGround";
 import StartNoSmoking from "./Contents/StartNoSmoking/StartNoSmoking";
 import MainContainer from "./MainContainer";
+import { InitTestData } from "./TestData";
 
 function App() {
+
+  useEffect(() => { 
+    if(sessionStorage.getItem('user') === null) { 
+        sessionStorage.setItem('user', JSON.stringify(InitTestData));
+    }
+}, [])
   return (
     <BrowserRouter>
         <MainContainer >
