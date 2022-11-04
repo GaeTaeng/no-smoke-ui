@@ -28,6 +28,12 @@ const DEV_TEST_DATA = [
         contents : "3번 내용 입니닷",
         create_user_name : "이소현",
         insert_timestamp : "2022년 11월 03일 18시 35분",
+    },
+    {
+        title : "배고파",
+        contents : "밥줘",
+        create_user_name : "김보연",
+        insert_timestamp : "2022년 11월 04일 13시 31분",
     }
 ]
 export default function Board({ children }) { 
