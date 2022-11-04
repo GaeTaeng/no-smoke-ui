@@ -10,7 +10,7 @@ const MENU_LIST = [
     {txt : "ExampleB", component : <ExampleB />},
 ]
 export default function PlayGround({ children }) { 
-    const [idx_menu, setIdxMenu] = useState(1); 
+    const [idx_menu, setIdxMenu] = useState(0); 
     return (
         <div>
             
