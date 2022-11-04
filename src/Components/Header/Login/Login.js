@@ -39,7 +39,7 @@ export default function Login({setUser}) {
     return (
         <div className="login"> 
             <div className="select">
-                <div className="selected">
+                <div className="selected ">
                     <div className="selected-value">사용자를 선택하여주세요.</div>
                     <div className="arrow"></div>
                 </div>
