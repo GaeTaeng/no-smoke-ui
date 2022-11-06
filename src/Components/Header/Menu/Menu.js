@@ -7,8 +7,8 @@ const MENU_LIST = [
     {txt : "Board", url : "board"},
     {txt : "Home", url : ""},
     {txt : "Setting", url : "setting"},
-    {txt : "잼민's 놀이터", url : "playground"},
     {txt : "TODO", url : "todo"},
+    {txt : "잼민's 놀이터", url : "playground"},
 ]
 
 const Menu = () => {
