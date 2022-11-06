@@ -5,6 +5,8 @@ export default function TodoItem({ idx,data }) {
             <th scope="row">{idx+1}</th>
             <td>{data.title}</td>
             <td>{data.contents}</td> 
+            <td>{data.etc}</td> 
+            <td>{data.insert_timestamp}</td> 
         </tr> 
     )
 }
