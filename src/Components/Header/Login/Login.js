@@ -45,9 +45,9 @@ export default function Login({setUser}) {
                 </div>
                 <ul>
                     {testData.map((user, idx) => { 
-                            return <li key={idx} className="option" onClick={handleClickLogin} value={idx}>{user.name}</li>
+                        return <li key={idx} className="option" onClick={handleClickLogin} value={idx}>{user.name}</li>
 
-                        })}   
+                    })}   
                 </ul>
             </div>  
         </div>
