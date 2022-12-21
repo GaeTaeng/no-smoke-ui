@@ -4,7 +4,6 @@ import ExampleA from "./Example/ExampleA";
 import ExampleB from "./Example/ExampleB";
 import PlayGroundMenu from "./PlayGroundMenu";
  
-
 const MENU_LIST = [
     {txt : "ExampleA", component : <ExampleA />},
     {txt : "ExampleB", component : <ExampleB />},
@@ -18,7 +17,7 @@ export default function PlayGround({ children }) {
             <PlayGroundMenu MENU_LIST={MENU_LIST} idx_menu={idx_menu} setIdxMenu={setIdxMenu}/>
             {/* Playground Menu영역 End */}
 
-            <div className="Description">
+            {/* <div className="Description">
                 마음대로 만들어두면 나중에 구조바꾸고 이런거 가르쳐줄게요
                 <br /><br /><br />
                 <ol>
@@ -27,7 +26,7 @@ export default function PlayGround({ children }) {
                     <li> 만든다음 상단의 MENU_LIST에 추가</li>
                 </ol>
                 <hr />
-            </div>
+            </div> */}
 
             <div className="contents">
                 {MENU_LIST[idx_menu].component}
