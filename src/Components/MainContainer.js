@@ -5,8 +5,8 @@ import Header from "./Header/Header";
 import Login from "./Header/Login/Login";
 import Menu from "./Header/Menu/Menu"; 
 import "./MainContainer.css"
-import { InitTestData, testData } from "./TestData";
-import "./Footer/Footer.css";
+import { InitTestData, testData } from "./TestData"; 
+import "./Footer/Footer.css"; 
 
 
 
@@ -29,8 +29,8 @@ export default function MainContainer({ children }) {
                 {children}
             </Contents>
 
-            <Footer>
-                <a className="footer_font" href="mailto: jyj6010@gmail.com" title="두둥탁">의견보내기</a>
+            <Footer> 
+                <a className="footer_font" href="mailto: jyj6010@gmail.com" title="두둥탁">의견보내기</a> 
             </Footer>
         </div>
     )
