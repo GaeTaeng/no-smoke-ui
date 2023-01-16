@@ -8,6 +8,7 @@ const MENU_LIST = [
     {txt : "Home", url : ""},
     {txt : "Setting", url : "setting"},
     {txt : "TODO", url : "todo"},
+    {txt : "COFFEE", url : "coffee"},
     {txt : "잼민's 놀이터", url : "playground"},
 ]
 
