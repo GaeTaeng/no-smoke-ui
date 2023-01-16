@@ -2,9 +2,7 @@
 
 #!! ERROR: os is undefined. Use list command to see defined gitignore types !!#
 
-##Taeng TEST
-*.lock
-package-lock.json
+##Taeng TEST 
 
 ### OSX ###
 *.DS_Store
