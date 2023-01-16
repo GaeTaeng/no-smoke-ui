@@ -30,7 +30,7 @@ export default function MainContainer({ children }) {
             </Contents>
 
             <Footer> 
-                <a className="footer_font" href="mailto: jyj6010@gmail.com" title="두둥탁">의견보내기</a> 
+                <a className="footer_font" href="mailto: nuckly60@gmail.com,jyj6010@gmail.com" title="두둥탁">의견보내기</a> 
             </Footer>
         </div>
     )
