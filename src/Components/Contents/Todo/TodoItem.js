@@ -7,6 +7,7 @@ export default function TodoItem({ idx,data }) {
             <td>{data.contents}</td> 
             <td>{data.etc}</td> 
             <td>{data.insert_timestamp}</td> 
+            <td><input type="checkbox" checked={data.is_complete} disabled/></td>
         </tr> 
     )
 }
