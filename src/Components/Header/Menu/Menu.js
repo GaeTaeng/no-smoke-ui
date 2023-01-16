@@ -7,7 +7,9 @@ const MENU_LIST = [
     {txt : "Board", url : "board"},
     {txt : "Home", url : ""},
     {txt : "Setting", url : "setting"},
-    {txt : "잼민's 놀이터", url : "playground"},
+    {txt : "TODO", url : "todo"}, 
+    {txt : "newsflash", url : "playground"}, 
+    {txt : "COFFEE", url : "coffee"}, 
 ]
 
 const Menu = () => {
@@ -25,7 +27,7 @@ const Menu = () => {
         })
       }, []);
     return ( 
-            <div className="container text-center">
+            <div className="container text-center menulist">
                 <div className="row">
                     {MENU_LIST.map((menu, idx) => {
                         return <Link key={idx} to={menu.url} className={`col menu ${idx_menu === idx ? "select" : ""}`} onClick={() => handleClickMenu(idx)}>
