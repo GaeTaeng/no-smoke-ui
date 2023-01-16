@@ -19,7 +19,7 @@ export default function Todo({ children }) {
                 </thead>
                 <tbody>
                     {TODO_LIST.map((todo, idx) => {
-                            return <TodoItem idx={idx} data={todo} />
+                            return <TodoItem key={`key_${idx}`} idx={idx} data={todo} />
                         })}
                 </tbody>
                 </table> 

@@ -8,6 +8,9 @@ import Todo from "./Contents/Todo/Todo";
 import MainContainer from "./MainContainer";
 import { InitTestData } from "./TestData";
 
+import { HelmetProvider } from 'react-helmet-async';
+
+import SEOMetaTag from './SEOMetaTag'
 function App() {
 
   useEffect(() => { 
@@ -17,9 +20,12 @@ function App() {
 }, [])
   return (
     <BrowserRouter>
+
+  <HelmetProvider>
         <MainContainer >
+          <SEOMetaTag title={"PlayGround"}/>
             <Routes>
-            <Route path="/" >
+            <Route path="/" > 
                 <Route path ="" element={<StartNoSmoking />} />
                 <Route path ="board"  element={<Board />}  />
                 <Route path ="playground"  element={<PlayGround />}  />
@@ -34,7 +40,7 @@ function App() {
             
             </Routes>
         </MainContainer>
-      
+        </HelmetProvider>
     </BrowserRouter>
   );
 }
