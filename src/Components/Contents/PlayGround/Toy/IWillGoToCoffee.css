@@ -1,7 +1,6 @@
 .coffee span{
     color : saddlebrown;
-    font-size: xx-large;
-    font-weight: bold;
+    font-size: 100px;
     
 
 }
@@ -9,6 +8,7 @@
 .coffee{
     margin-top: 50px;
     margin-left: 30px; 
-    width : 500px;
+    font-weight: bold;
 
+    font-size: 60px;
 }
