@@ -21,7 +21,7 @@ export default function IWillGoToCoffee({ children }) {
  
     return (
         <div className="coffee"> 
-            <SEOMetaTag title={"IWillGoToCoffee"} description={"커피하나만 사서올게요!\n음료 필요하면 말씀해주세요!"} imgsrc={"./IWillGoToCoffee.png"} url={"https://gaetaeng.xyz/coffee"}/>
+            <SEOMetaTag title={"IWillGoToCoffee"} description={"커피하나만 사서올게요!\n음료 필요하면 말씀해주세요!"} imgsrc={"src/Components/Contents/PlayGround/Toy/IWillGoToCoffee.png"} url={"https://gaetaeng.xyz/coffee"}/>
             <p><div ><span>커피</span> 하나만 사서 오겠습니다!</div></p>
             <p>음료 필요하시면 말씀해주세요!!</p>
         </div>
