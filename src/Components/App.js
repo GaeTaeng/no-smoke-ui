@@ -11,6 +11,7 @@ import { InitTestData } from "./TestData";
 import { HelmetProvider } from 'react-helmet-async';
 
 import SEOMetaTag from './SEOMetaTag' 
+import Setting from "./Contents/Setting/Setting";
 function App() {
 
   useEffect(() => { 
@@ -23,13 +24,14 @@ function App() {
 
   <HelmetProvider>
         <MainContainer >
-          <SEOMetaTag title={"PlayGround"}/>
+        <SEOMetaTag title={"PlayGround!"} description={"개발_놀이터"} imgsrc={"public/logo.png"} url={"https://gaetaeng.xyz/home"}/>
             <Routes>
             <Route path="/" >  
                 <Route path ="" element={<StartNoSmoking />} />
                 <Route path ="board"  element={<Board />}  />
                 <Route path ="playground"  element={<PlayGround />}  />
                 <Route path ="todo"  element={<Todo />}  /> 
+                <Route path ="setting"  element={<Setting />}  /> 
                 <Route path = "coffee" element={<IWillGoToCoffee />} /> 
                 {/* <Route path ="profile/:userId"  element={<div>ㄲㄱ</div>} 
                 loader={({ params }) => {

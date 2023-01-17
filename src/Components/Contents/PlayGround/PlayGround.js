@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import NewsManagement from "./News/NewsManagement";
 import ExampleB from "./News/ExampleB";
 import PlayGroundMenu from "./PlayGroundMenu";
+import SEOMetaTag from "../../SEOMetaTag";
 
 const NEWS_LIST = [
     {
@@ -50,6 +51,7 @@ export default function PlayGround({ children }) {
     const [idx_menu, setIdxMenu] = useState(0); 
     return (
         <div> 
+        <SEOMetaTag title={"Real PlayGround"} description={"금연기원"} imgsrc={"public/logo.png"} />
             {/* Playground Menu영역 Start */}
             <PlayGroundMenu MENU_LIST={MENU_LIST} idx_menu={idx_menu} setIdxMenu={setIdxMenu}/>
             {/* Playground Menu영역 End */}

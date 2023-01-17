@@ -1,5 +1,6 @@
 import dayjs from "dayjs";
 import React, { useEffect } from "react";  
+import SEOMetaTag from "../../SEOMetaTag";
 import { InitTestData, testData } from "../../TestData";
 import "./StartNoSmoking.css"
  
@@ -25,6 +26,7 @@ export default function StartNoSmoking() {
     ]
     return (
         <div className="container text-center">
+            <SEOMetaTag title={"금연시작"} description={"금연기원"} imgsrc={"public/logo.png"} />
             <div className="row row-cols-2">
                 {li_data.map((data, idx) => {
                     return <div key={idx} >

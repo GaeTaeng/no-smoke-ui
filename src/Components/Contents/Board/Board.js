@@ -1,5 +1,6 @@
 import dayjs from "dayjs";
 import React, { useEffect, useState } from "react";  
+import SEOMetaTag from "../../SEOMetaTag";
 import BoardListManagement from "./BoardListManagement/BoardListManagement"; 
 
 const BOARD_ITEM_INIT = {
@@ -70,6 +71,7 @@ export default function Board({ children }) {
 
     return (
         <div className="board"> 
+        <SEOMetaTag title={"게시판"} description={"게시판"} imgsrc={"public/logo.png"} url={"https://gaetaeng.xyz/board"}/>
             <BoardListManagement boardList={boardList}/>    
         </div>
     )

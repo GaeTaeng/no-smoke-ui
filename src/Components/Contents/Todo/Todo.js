@@ -1,4 +1,5 @@
 import React, { useState } from "react";   
+import SEOMetaTag from "../../SEOMetaTag";
 import TodoItem from "./TodoItem";
  
 
@@ -9,6 +10,7 @@ const TODO_LIST = [
 export default function Todo({ children }) {  
     return (   
                 <table className="table">
+                <SEOMetaTag title={"TODO"} description={"Feature"} imgsrc={"public/logo.png"} />
                 <thead>
                     <tr>
                     <th scope="col">#</th>
