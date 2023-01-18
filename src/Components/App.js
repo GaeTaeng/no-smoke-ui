@@ -24,7 +24,7 @@ function App() {
 
   <HelmetProvider>
         <MainContainer >
-        <SEOMetaTag title={"PlayGround!"} description={"개발_놀이터"} imgsrc={"public/logo.png"} url={"https://gaetaeng.xyz/home"}/>
+        {/* <SEOMetaTag title={"PlayGround!"} description={"개발_놀이터"} imgsrc={"public/logo.png"} url={"https://gaetaeng.xyz/home"}/> */}
             <Routes>
             <Route path="/" >  
                 <Route path ="" element={<StartNoSmoking />} />

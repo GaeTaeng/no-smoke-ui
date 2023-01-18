@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";  
+import React from "react";
 import SEOMetaTag from "../../../SEOMetaTag";
-import "./IWillGoToCoffee.css"
+import "./IWillGoToCoffee.css";
 
  /**
 

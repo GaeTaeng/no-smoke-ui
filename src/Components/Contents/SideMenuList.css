@@ -1,0 +1,15 @@
+.side {
+    position: fixed;
+    transform: matrix(1, 0, 0, 1, 0, 200);
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+.side.right {
+    right: 0px;
+}
+.side.menu .item {
+    border: 1px solid black;
+    height: 50px;
+    text-align: center;
+}
