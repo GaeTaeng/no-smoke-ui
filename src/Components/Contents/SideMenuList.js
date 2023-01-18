@@ -1,8 +1,8 @@
 import React from "react";
 import "./SideMenuList.css";
 const MENU_LIST = [
-    {label : "1번메뉴", className : "newWrite"},
-    {label : "2번메뉴", className : "newWrite"},
+    {label : "작성", className : "newWrite"},
+    {label : "2번", className : "newWrite"},
     {label : "3번메뉴", className : "newWrite"},
     {label : "4번메뉴", className : "newWrite"},
     {label : "5번메뉴", className : "newWrite"},
