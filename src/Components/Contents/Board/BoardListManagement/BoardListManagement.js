@@ -1,6 +1,6 @@
 import React from "react";  
 import BoardItem from "./BoardItem/BoardItem";
-import BoardItem_v2 from "./BoardItem/BoardItem_v2";
+import BoardItem_v2 from "./BoardItem/BoardItemV2";
 
 export default function BoardListManagement({ boardList }) { 
     return (
@@ -15,7 +15,10 @@ export default function BoardListManagement({ boardList }) {
         
             <div className="container text-center">
                 <div className="row">
-                    <div className="col col-md-2 title">TITLE</div><div className="col col-md-7 title">CONTENTS</div><div className="col col-md-1 title">작성자</div><div className="col col-md-2 title">작성일</div>
+                    <div className="col col-md-2 title">TITLE</div>
+                    <div className="col col-md-7 title">CONTENTS</div>
+                    <div className="col col-md-1 title">작성자</div>
+                    <div className="col col-md-2 title">작성일</div>
                 </div>
                 {boardList.map((board, idx) => {
                     console.log("board : ", board)
