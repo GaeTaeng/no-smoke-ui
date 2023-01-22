@@ -31,7 +31,7 @@ function App() {
                 <Route path ="" element={<Home />} />
                 <Route path ="home" element={<Home />} />
                 <Route path ="nosmoking" element={<StartNoSmoking />} />
-                <Route path ="board"  element={<Board />}  />
+                <Route path ="board"  element={<Board type={0} is_preview={false}/>}  />
                 <Route path ="playground"  element={<PlayGround />}  />
                 <Route path ="todo"  element={<Todo />}  /> 
                 <Route path ="setting"  element={<Setting />}  /> 

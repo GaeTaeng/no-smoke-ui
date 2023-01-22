@@ -25,7 +25,7 @@ export default function BoardListManagement({ boardList }) {
                     return <BoardItem key={idx} data={board} />
                 })}
             </div>  
-            <div className="Description">
+            <div className="Description ">
                 2. Table BootStrap을 이용한 방식
             </div>
             

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Board from "../Board/Board";
 import BoardPreview from "../Board/BoardListManagement/BoardPreview";
 import "./Home.css"; 
 
@@ -40,7 +41,7 @@ export default function Home({ children }) {
     const navigate = useNavigate();
     return (
         <div className="home"> 
-             <BoardPreview  boardList={boardList}/>
+             <Board boardList={boardList} is_preview={true}/>
         </div>
     )
 }
