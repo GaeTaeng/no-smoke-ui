@@ -31,10 +31,10 @@ const DEV_TEST_DATA = [
         insert_timestamp : "2022.11.03 18:35",
     },
     {
-        title : "배고파",
-        contents : "밥줘",
-        create_user_name : "김보연",
-        insert_timestamp : "2022.11.04 13:31",
+        title : "꼬맨틀 매크로 만들기",
+        contents : "https://gaetaeng.tistory.com/56",
+        create_user_name : "김태훈",
+        insert_timestamp : "2023.01.25 16:29",
     }
 ]
 export default function Board({ children }) { 
