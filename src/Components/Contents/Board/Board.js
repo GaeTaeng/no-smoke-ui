@@ -2,6 +2,7 @@ import dayjs from "dayjs";
 import React, { useEffect, useState } from "react";  
 import SEOMetaTag from "../../SEOMetaTag";
 import BoardListManagement from "./BoardListManagement/BoardListManagement"; 
+import BoardPreview from "./BoardListManagement/BoardPreview";
 
 const BOARD_ITEM_INIT = {
     title : "",
@@ -37,7 +38,7 @@ const DEV_TEST_DATA = [
         insert_timestamp : "2023.01.25 16:29",
     }
 ]
-export default function Board({ children }) { 
+export default function Board({ children, type, is_preview }) { 
     const [boardList, setBoardList] = useState(DEV_TEST_DATA);
 
 
@@ -71,8 +72,11 @@ export default function Board({ children }) {
 
     return (
         <div className="board"> 
-        <SEOMetaTag title={"게시판"} description={"게시판"} imgsrc={"public/logo.png"} url={"https://gaetaeng.xyz/board"}/>
-            <BoardListManagement boardList={boardList}/>    
+            <SEOMetaTag title={"게시판"} description={"게시판"} imgsrc={"public/logo.png"} url={"https://gaetaeng.xyz/board"}/>
+            {
+                is_preview ? <BoardPreview  boardList={boardList}/> :
+                <BoardListManagement is_preview={is_preview} boardList={boardList}/>
+            }    
         </div>
     )
 }

@@ -27,7 +27,7 @@
     text-decoration-line: none;
 }
 
-.side.menu li.item a { 
+.side.menu li.item div { 
     text-decoration-line: none;
     color: white;
 }

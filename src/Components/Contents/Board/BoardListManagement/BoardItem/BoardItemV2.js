@@ -1,5 +1,5 @@
 import React from "react";   
-export default function BoardItem_v2({ idx,data }) { 
+export default function BoardItemV2({ idx,data }) { 
     return (
         <tr key={idx+1}>
             <th scope="row">{idx+1}</th>

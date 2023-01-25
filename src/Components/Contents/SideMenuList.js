@@ -1,21 +1,21 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./SideMenuList.css";
 const MENU_LIST = [
-    {label : "작성", className : "newWrite"},
-    {label : "2번", className : "newWrite"},
-    {label : "3번메뉴", className : "newWrite"},
-    {label : "4번메뉴", className : "newWrite"},
-    {label : "5번메뉴", className : "newWrite"},
-    {label : "6번메뉴", className : "newWrite"}
+    {label : "홈", className : "newWrite", url : "/home"},
+    {label : "작성", className : "newWrite", url : "/board"},
+    {label : "Back", className : "newWrite", url : -1},
 ]
 export default function SideMenuList({ children }) { 
     // const menu_size = MENU_LIST.length * 50 + 50
+
+    const navigate = useNavigate();
     return (
         <div className="side right menu list">
             <ul>
-                {MENU_LIST.map(menu => {
-                    return <li className="item">
-                        <a className={`${menu.className}`} href={"/"}>{menu.label}</a>
+                {MENU_LIST.map((menu, idx) => {
+                    return <li key={`side_menu_${idx}`} className="item">
+                        <div className={`${menu.className}`} onClick={()=>navigate(menu.url)}>{menu.label}</div>
                     </li>
                 })}
             </ul>

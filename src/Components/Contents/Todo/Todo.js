@@ -7,7 +7,8 @@ const TODO_LIST = [
     {is_complete : false, title : "zustand 적용", contents : "redux 대체품", etc : "", insert_timestamp : "2022.11.06"}, 
     {is_complete : true, title : "react-helmet-async 적용", contents : "동적으로 Meta Tag세팅을 도와줌", etc : "", insert_timestamp : "2023.01.16"}, 
     {is_complete : false, title : "SNB LIST Props로 분기처리", contents : "SNB LIST Props로 분기처리", etc : "", insert_timestamp : "2023.01.18"}, 
-    {is_complete : false, title : "Back API 설정", contents : "Back API 설정", etc : "", insert_timestamp : "2023.01.18"}, 
+    {is_complete : false, title : "Back API 설정", contents : "Spring Boot JPA", etc : "", insert_timestamp : "2023.01.18"},  
+    {is_complete : false, title : "메인화면 게시글 미리보기 레이아웃 추가", contents : " ", etc : "", insert_timestamp : "2023.01.23"},  
 ]
 export default function Todo({ children }) {  
     return (   
