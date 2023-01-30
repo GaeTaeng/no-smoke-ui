@@ -1,4 +1,4 @@
-.board:nth-of-type(1) { 
+.board.boardpreview:nth-of-type(1) { 
     border : 1px solid black;
     position:absolute;
     top:25%;
@@ -6,7 +6,7 @@
     right:51%;
     bottom:51%;
 }
-.board:nth-of-type(2) {
+.board.boardpreview:nth-of-type(2) {
     border : 1px solid black;
     position:absolute;
     top:25%;
@@ -14,7 +14,7 @@
     right:10%;
     bottom:51%;
 }
-.board:nth-of-type(3) {
+.board.boardpreview:nth-of-type(3) {
     border : 1px solid black;
     position:absolute;
     top:51%;
@@ -22,7 +22,7 @@
     right:51%;
     bottom:25%;
 }
-.board:nth-of-type(4) {
+.board.boardpreview:nth-of-type(4) {
     border : 1px solid black;
     position:absolute;
     top:51%;

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Board from "../Board/Board";
-import BoardPreview from "../Board/BoardListManagement/BoardPreview";
+import Board from "../Board/Board"; 
 import "./Home.css"; 
 
 

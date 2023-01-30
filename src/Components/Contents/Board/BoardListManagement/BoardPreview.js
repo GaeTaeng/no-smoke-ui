@@ -3,8 +3,7 @@ import BoardItemV2 from "./BoardItem/BoardItemV2";
 
 import "./BoardPreview.css"
 export default function BoardPreview({ boardList }) { 
-    return (
-        <div className="boardpreview"> 
+    return ( 
             
             <table className="table">
                 <thead>
@@ -21,8 +20,6 @@ export default function BoardPreview({ boardList }) {
                             return <BoardItemV2 key={`board_item_${idx}`} idx={idx} data={board} />
                         })}
                 </tbody>
-            </table>
-
-        </div>
+            </table> 
     )
 }
