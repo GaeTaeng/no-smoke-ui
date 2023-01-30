@@ -26,8 +26,8 @@ const DEV_TEST_DATA = [
         insert_timestamp : "2022.11.03 16:35",
     },
     {
-        title : "3번 게시글 입니닷",
-        contents : "3번 내용 입니닷",
+        title : "3번 게시글 입니닷a3번 게시글 입니닷a3번 게시글 입니닷a",
+        contents : "3번 내용 입니닷aㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ입니닷aㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ",
         create_user_name : "이소현",
         insert_timestamp : "2022.11.03 18:35",
     },
