@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import SEOMetaTag from "../../SEOMetaTag";
 import BoardListManagement from "./BoardListManagement/BoardListManagement"; 
 import BoardPreview from "./BoardListManagement/BoardPreview";
-
+ 
 const BOARD_ITEM_INIT = {
     title : "",
     contents : "",

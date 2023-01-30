@@ -11,9 +11,9 @@ export default function BoardPreview({ boardList }) {
                     <tr>
                     <th scope="col">#</th>
                     <th className="col_title" scope="col">TITLE</th>
-                    <th scope="col">CONTENTS</th>
-                    <th scope="col">작성자</th>
-                    <th scope="col">작성일</th>
+                    <th className="col_contents" scope="col">CONTENTS</th>
+                    <th className="col_create_user_name" scope="col">작성자</th>
+                    <th className="col_insert_timestamp" scope="col">작성일</th>
                     </tr>
                 </thead>
                 <tbody> 

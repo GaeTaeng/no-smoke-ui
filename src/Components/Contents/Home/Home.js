@@ -24,7 +24,10 @@ export default function Home({ children }) {
     const navigate = useNavigate();
     return (
         <div className="home"> 
-             <Board boardList={boardList} is_preview={true}/>
+        <Board boardList={boardList} is_preview={true}/>
+        <Board boardList={boardList} is_preview={true}/>
+        <Board boardList={boardList} is_preview={true}/>
+        <Board boardList={boardList} is_preview={true}/>
         </div>
     )
 }
