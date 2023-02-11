@@ -13,6 +13,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import SEOMetaTag from './SEOMetaTag' 
 import Setting from "./Contents/Setting/Setting";
 import Home from "./Contents/Home/Home";
+import BullsAndCows from "./Contents/PlayGround/BullsAndCows/BullsAndCows";
 function App() {
 
   useEffect(() => { 
@@ -32,6 +33,7 @@ function App() {
                 <Route path ="home" element={<Home />} />
                 <Route path ="nosmoking" element={<StartNoSmoking />} />
                 <Route path ="board"  element={<Board type={0} is_preview={false}/>}  />
+                <Route path ="bullsandcows"  element={<BullsAndCows />}  />
                 <Route path ="playground"  element={<PlayGround />}  />
                 <Route path ="todo"  element={<Todo />}  /> 
                 <Route path ="setting"  element={<Setting />}  /> 
