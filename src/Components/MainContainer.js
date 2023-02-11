@@ -22,7 +22,7 @@ export default function MainContainer({ children }) {
         <div> 
              <Header >
                 <Menu />
-                <Login  setUser={(user) => handleClickLogin(user)}/>
+                {/* <Login  setUser={(user) => handleClickLogin(user)}/> */}
              </Header>
              
             <Contents >

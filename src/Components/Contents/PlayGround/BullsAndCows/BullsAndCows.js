@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEOMetaTag from '../../../SEOMetaTag';
 
 const BullsAndCows = () => {
   const [answer, setAnswer] = useState(generateAnswer());
@@ -59,6 +60,13 @@ const BullsAndCows = () => {
 
   return (
     <div>
+    <div className="Description">
+        chatGPT만을 이용하여 작성한 페이지입니다.
+        input 초기화 등
+        추가기능을 더 넣지않을 예정인점 양해부탁드립니다. <br /><br />
+    </div>
+    
+    <SEOMetaTag title={"숫자야구 게임"} description={"숫자야구 게임"} imgsrc={"public/logo.png"} url={"https://gaetaeng.xyz/bullsandcows"}/>
       <h1>숫자야구 게임</h1>
       <form onSubmit={handleGuess}>
         <input type="text" name="guess" />
