@@ -1,7 +1,11 @@
-import React from "react";   
+import React from "react";    
 import BoardItemvV2 from "./BoardItem/BoardItemV2";
 
 export default function BoardListManagement({ boardList }) { 
+     
+    function handleClickNewPost() {   
+        window.location.href = "/board/new"
+    }
     return (
         <div className="boardlistmanagement">   
             <div className="Description ">
@@ -24,6 +28,7 @@ export default function BoardListManagement({ boardList }) {
                     })}
             </tbody>
             </table>
+            <button onClick={handleClickNewPost}>글쓰기</button>
         </div>
     )
 }
