@@ -14,6 +14,7 @@ import SEOMetaTag from './SEOMetaTag'
 import Setting from "./Contents/Setting/Setting";
 import Home from "./Contents/Home/Home";
 import BullsAndCows from "./Contents/PlayGround/BullsAndCows/BullsAndCows";
+import BoardAdd from "./Contents/Board/BoardListManagement/BoardItem/BoardAdd";
 function App() {
 
   useEffect(() => { 
@@ -32,7 +33,9 @@ function App() {
                 <Route path ="" element={<Home />} />
                 <Route path ="home" element={<Home />} />
                 <Route path ="nosmoking" element={<StartNoSmoking />} />
-                <Route path ="board"  element={<Board type={0} is_preview={false}/>}  />
+                <Route path ="board"  element={<Board type={0} is_preview={false}/>}  />  
+                <Route path ="board/*"  element={<Board type={0} is_preview={false}/>}  />  
+                <Route path ="board/new"  element={<BoardAdd />}  />  
                 <Route path ="bullsandcows"  element={<BullsAndCows />}  />
                 <Route path ="playground"  element={<PlayGround />}  />
                 <Route path ="todo"  element={<Todo />}  /> 
