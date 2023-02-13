@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SEOMetaTag from "../../../SEOMetaTag";
 import "./IWillGoToCoffee.css";
 
 function IWillGoToCoffee() {
@@ -11,6 +12,7 @@ function IWillGoToCoffee() {
 
   return (
     <div className="iwillgotocoffee">
+    <SEOMetaTag title={"IWillGoToCoffee"} description={"커피하나만 사서올게요!\n음료 필요하면 말씀해주세요!"} imgsrc={"src/Components/Contents/PlayGround/Toy/IWillGoToCoffee.png"} url={"https://gaetaeng.xyz/coffee"}/>
       <h1 className="iwillgotocoffee-title">Going to get coffee!</h1>
       <button onClick={handleClick} className="iwillgotocoffee-button">Set reminder</button>
       {alert && (
