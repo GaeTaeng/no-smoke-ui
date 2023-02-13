@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import SEOMetaTag from "../../SEOMetaTag";
 import BoardListManagement from "./BoardListManagement/BoardListManagement"; 
 import BoardPreview from "./BoardListManagement/BoardPreview";
+import { DEV_TEST_DATA } from "./TEST_DATA";
  
 const BOARD_ITEM_INIT = {
     title : "",
@@ -12,33 +13,7 @@ const BOARD_ITEM_INIT = {
 }
 
 
-const DEV_TEST_DATA = [
-    {
-        title : "1번 게시글 입니닷",
-        contents : "1번 내용 입니닷",
-        create_user_name : "김태훈",
-        insert_timestamp : "2022.11.03 11:35",
-    },
-    {
-        title : "2번 게시글 입니닷",
-        contents : "2번 내용 입니닷",
-        create_user_name : "정유진",
-        insert_timestamp : "2022.11.03 16:35",
-    },
-    {
-        title : "3번 게시글 입니닷a3번 게시글 입니닷a3번 게시글 입니닷a",
-        contents : "3번 내용 입니닷aㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ입니닷aㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ",
-        create_user_name : "이소현",
-        insert_timestamp : "2022.11.03 18:35",
-    },
-    {
-        title : "꼬맨틀 매크로 만들기",
-        contents : "https://gaetaeng.tistory.com/56",
-        create_user_name : "김태훈",
-        insert_timestamp : "2023.01.25 16:29",
-    }
-]
-export default function Board({ children, type, is_preview }) { 
+export default function Board({ children, type, is_preview, ...props }) { 
     const [boardList, setBoardList] = useState(DEV_TEST_DATA);
 
 
@@ -70,12 +45,13 @@ export default function Board({ children, type, is_preview }) {
         getBoardList();
       }, []);
 
+      console.log("props : ", props)
     return (
         <div className={`board ${is_preview ? "boardpreview" : ""}`}> 
             <SEOMetaTag title={"게시판"} description={"게시판"} imgsrc={"public/logo.png"} url={"https://gaetaeng.xyz/board"}/>
             {
                 is_preview ? <BoardPreview  boardList={boardList}/> :
-                <BoardListManagement is_preview={is_preview} boardList={boardList}/>
+                <BoardListManagement boardList={boardList} />
             }    
         </div>
     )

@@ -6,6 +6,7 @@ import "./Menu.css"
 const MENU_LIST = [
     {txt : "Board", url : "board"},
     {txt : "Home", url : ""},
+    {txt : "숫자야구게임", url : "bullsandcows"},
     {txt : "Setting", url : "setting"},
     {txt : "TODO", url : "todo"}, 
     {txt : "newsflash", url : "playground"}, 

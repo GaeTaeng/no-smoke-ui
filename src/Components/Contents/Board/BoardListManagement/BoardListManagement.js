@@ -1,12 +1,15 @@
-import React from "react";  
-import BoardItem from "./BoardItem/BoardItem";
-import BoardItem_v2 from "./BoardItem/BoardItemV2";
+import React from "react";    
+import BoardItemvV2 from "./BoardItem/BoardItemV2";
 
 export default function BoardListManagement({ boardList }) { 
+     
+    function handleClickNewPost() {   
+        window.location.href = "/board/new"
+    }
     return (
         <div className="boardlistmanagement">  
         <div className="Description">
-            아래와 같이 총 2가지 방법으로 개발 가능. <br /><br />
+            아래와 같이 총 2가지 방법으로 개발 가능.(더있지만 귀찮..) <br /><br />
         </div>
         <div className="Description">
             1. DIV BootStrap을 이용한 방식
@@ -41,10 +44,11 @@ export default function BoardListManagement({ boardList }) {
             </thead>
             <tbody>
                 {boardList.map((board, idx) => { 
-                        return <BoardItem_v2 key={idx} idx={idx} data={board} />
+                        return <BoardItemvV2 key={idx} idx={idx} data={board} />
                     })}
             </tbody>
             </table>
+            <button onClick={handleClickNewPost}>글쓰기</button>
         </div>
     )
 }
