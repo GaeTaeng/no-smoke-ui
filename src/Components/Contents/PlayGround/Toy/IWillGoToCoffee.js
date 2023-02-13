@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SEOMetaTag from "../../../SEOMetaTag";
+import Notification from "./GoingToGetCoffee/Notification";
 import "./IWillGoToCoffee.css";
 
 function IWillGoToCoffee() {
@@ -17,7 +18,7 @@ function IWillGoToCoffee() {
       <button onClick={handleClick} className="iwillgotocoffee-button">Set reminder</button>
       {alert && (
         <p className="iwillgotocoffee-alert">
-          Time to go get coffee!
+          <Notification />
         </p>
       )}
     </div>
