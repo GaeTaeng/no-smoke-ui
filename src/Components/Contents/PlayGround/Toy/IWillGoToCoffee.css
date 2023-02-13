@@ -1,14 +1,29 @@
-.coffee span{
-    color : saddlebrown;
-    font-size: 100px;
-    
-
-}
-
-.coffee{
+.iwillgotocoffee {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: lightgray;
+  }
+  
+  .iwillgotocoffee-title {
+    font-size: 36px;
     margin-top: 50px;
-    margin-left: 30px; 
-    font-weight: bold;
-
-    font-size: 60px;
-}
+  }
+  
+  .iwillgotocoffee-button {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .iwillgotocoffee-alert {
+    margin-top: 20px;
+    font-size: 20px;
+    color: red;
+  }
+  
