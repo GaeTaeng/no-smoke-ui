@@ -6,7 +6,7 @@ export default function BoardListManagement({ boardList }) {
     return (
         <div className="boardlistmanagement">  
         <div className="Description">
-            아래와 같이 총 2가지 방법으로 개발 가능.(더있지만 귀찮..) <br /><br />
+            아래와 같이 총 2가지 방법으로 개발 가능. <br /><br />
         </div>
         <div className="Description">
             1. DIV BootStrap을 이용한 방식
