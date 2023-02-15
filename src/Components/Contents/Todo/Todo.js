@@ -9,6 +9,7 @@ const TODO_LIST = [
     {is_complete : false, title : "SNB LIST Props로 분기처리", contents : "SNB LIST Props로 분기처리", etc : "", insert_timestamp : "2023.01.18"}, 
     {is_complete : false, title : "Back API 설정", contents : "Spring Boot JPA", etc : "", insert_timestamp : "2023.01.18"},  
     {is_complete : false, title : "메인화면 게시글 미리보기 레이아웃 추가", contents : " ", etc : "", insert_timestamp : "2023.01.23"},  
+    {is_complete : false, title : "웹게임 만들어보기", contents : " ", etc : "", insert_timestamp : "2023.02.16"},  
 ]
 export default function Todo({ children }) {  
     return (   

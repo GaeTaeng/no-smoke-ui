@@ -4,13 +4,13 @@ import { useLocation } from "react-router-dom";
 import "./Menu.css"
 
 const MENU_LIST = [
+    {txt : "COFFEE", url : "coffee"}, 
+    {txt : "Games", url : "games"}, 
     {txt : "Board", url : "board"},
-    {txt : "Home", url : ""},
-    {txt : "숫자야구게임", url : "bullsandcows"},
-    {txt : "Setting", url : "setting"},
+    {txt : "Home", url : ""}, 
     {txt : "TODO", url : "todo"}, 
     {txt : "newsflash", url : "playground"}, 
-    {txt : "COFFEE", url : "coffee"}, 
+    {txt : "Setting", url : "setting"},
 ]
 
 const Menu = () => {
