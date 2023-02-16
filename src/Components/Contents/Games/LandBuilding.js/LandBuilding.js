@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import './LandBuilding.css';
 
-import "./LandBuilding.css"
 // Define constants for resources
 const WOOD = 'wood';
 const STONE = 'stone';
@@ -98,7 +98,7 @@ const tileData = {
   },
 };
 
-class LandBuildings extends Component {
+class LandBuilding extends Component {
   state = {
     tiles: [
       ['forest', 'lake', 'mountain'],
@@ -117,6 +117,7 @@ class LandBuildings extends Component {
         job: UNEMPLOYED,
       },
     ],
+    clickedTile: null,
   };
 
   // Handle moving to a new tile
@@ -129,79 +130,72 @@ class LandBuildings extends Component {
       resources[resource] += tileData[tile].resources[resource];
     });
 
-    // Update the state with the new resources
-    this.setState({
-      resources,
-    });
-  };
-
-// Handle assigning a job to a person
-handleJobChange = (personId, job) => {
-    const population = [...this.state.population];
-    population[personId] = {
-    ...population[personId],
-    job,
-    };
-    this.setState({
-    population,
+    // Update the state with the new resources and clicked tile
+this.setState({
+    resources,
+    clickedTile: {
+    row,
+    col,
+    },
     });
     };
     
+    // Handle assigning a job to a person
+    handleAssignJob = (personId, job) => {
+    const population = [...this.state.population];
+    const index = population.findIndex(person => person.id === personId);
+
+    if (index >= 0) {
+        population[index].job = job;
+        this.setState({ population });
+      }
+    };
+
     render() {
-    const { tiles, resources, population } = this.state;
+    const { tiles, resources, population, clickedTile } = this.state;
+
     return (
-        <div>
-          <div className="tiles">
+        <div className="game">
+          <div className="sidebar">
+            <h2>Resources:</h2>
+            <ul>
+              {Object.keys(resourceData).map(resource => (
+                <li key={resource}>
+                  {resourceData[resource].icon} {resourceData[resource].name}: {resources[resource]}
+                </li>
+              ))}
+            </ul>
+            <h2>Population:</h2>
+            <ul>
+              {population.map(person => (
+                <li key={person.id}>
+                  {jobData[person.job].icon} {jobData[person.job].name} ({person.id})
+                  <div className="job-buttons">
+                    {Object.keys(jobData)
+                      .filter(job => job !== person.job)
+                      .map(job => (
+                        <button key={job} onClick={() => this.handleAssignJob(person.id, job)}>
+                          {jobData[job].name}
+                        </button>
+                      ))}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="board">
             {tiles.map((row, rowIndex) => (
               <div key={rowIndex} className="row">
                 {row.map((tile, colIndex) => (
                   <div
-                    key={`${rowIndex}-${colIndex}`}
-                    className="tile"
+                    key={colIndex}
+                    className={`tile ${clickedTile && clickedTile.row === rowIndex && clickedTile.col === colIndex ? 'active' : ''}`}
                     onClick={() => this.handleMove(rowIndex, colIndex)}
                   >
-                    <div className="icon">{tileData[tile].icon}</div>
-                    <div className="name">{tileData[tile].name}</div>
-                    {tileData[tile].resources && (
-                      <div className="resources">
-                        {Object.keys(tileData[tile].resources).map(resource => (
-                          <div key={resource}>
-                            {resourceData[resource].icon} {tileData[tile].resources[resource]}{' '}
-                            {resourceData[resource].name}
-                          </div>
-                        ))}
-                      </div>
-                    )}
+                    <div className="tile-icon">{tileData[tile].icon}</div>
+                    <div className="tile-name">{tileData[tile].name}</div>
                   </div>
                 ))}
-              </div>
-            ))}
-          </div>
-          <div className="resources">
-            {Object.keys(resources).map(resource => (
-              <div key={resource}>
-                {resourceData[resource].icon} {resources[resource]} {resourceData[resource].name}
-              </div>
-            ))}
-          </div>
-          <div className="population">
-            <h2>Population</h2>
-            {population.map(person => (
-              <div key={person.id}>
-                <div className="icon">{jobData[person.job].icon}</div>
-                <div className="name">{jobData[person.job].name}</div>
-                <div className="actions">
-                  <select
-                    value={person.job}
-                    onChange={event => this.handleJobChange(person.id, event.target.value)}
-                  >
-                    {Object.keys(jobData).map(job => (
-                      <option key={job} value={job}>
-                        {jobData[job].name}
-                      </option>
-                    ))}
-                  </select>
-                </div>
               </div>
             ))}
           </div>
@@ -210,5 +204,4 @@ handleJobChange = (personId, job) => {
     }
 }
 
-export default LandBuildings;
-      
+export default LandBuilding;
