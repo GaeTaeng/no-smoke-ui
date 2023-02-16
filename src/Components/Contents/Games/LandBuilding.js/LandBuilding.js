@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import "./LandBuilding.css"
 // Define constants for resources
 const WOOD = 'wood';
 const STONE = 'stone';
