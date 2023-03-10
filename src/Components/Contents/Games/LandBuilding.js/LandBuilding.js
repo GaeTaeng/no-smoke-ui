@@ -105,7 +105,7 @@ const INIT_MAP = [
   ['mountain', 'grassland', 'forest'],
 ]
 export default function LandBuilding({}){
-  const [tileSize, setTileSize] = useState({x : 2, y : 3})
+  const [tileSize, setTileSize] = useState({x : 4, y : 4})
   const [tiles, setTiles] = useState(INIT_MAP);
   const [resources, setResources] = useState({
     [WOOD]: 0,
@@ -161,36 +161,38 @@ export default function LandBuilding({}){
         setPopulation(population)
       }
     };
-  
-console.log("tiles : ", tiles)
+   
     return (
         <div className="game-board">
-          <div className="sidebar">
-            <h2>Resources:</h2>
-            <ul>
+          <div className="sidebar"> 
+            <ul  className="resource-buttons">
               {Object.keys(resourceData).map(resource => (
                 <li key={resource}>
                   {resourceData[resource].icon} {resourceData[resource].name}: {resources[resource]}
                 </li>
               ))}
             </ul>
-            <h2>Population:</h2>
-            <ul>
-              {population.map(person => (
-                <li key={person.id}>
-                  {jobData[person.job].icon} {jobData[person.job].name} ({person.id})
-                  <div className="job-buttons">
-                    {Object.keys(jobData)
-                      .filter(job => job !== person.job)
-                      .map(job => (
-                        <button key={job} onClick={() => handleAssignJob(person.id, job)}>
-                          {jobData[job].name}
-                        </button>
-                      ))}
-                  </div>
-                </li>
-              ))}
-            </ul>
+            <div style={{display:"none"}}>
+              <h2>직업선택:</h2>
+              <ul>
+                {population.map(person => (
+                  <li key={person.id}>
+                    {jobData[person.job].icon} {jobData[person.job].name} ({person.id})
+                    <div className="job-buttons">
+                      {Object.keys(jobData)
+                        .filter(job => job !== person.job)
+                        .map(job => (
+                          <button key={job} onClick={() => handleAssignJob(person.id, job)}>
+                            {jobData[job].name}
+                          </button>
+                        ))}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+            </div>
+            
           </div>
           <div className="board">
             {tiles.map((row, rowIndex) => (
