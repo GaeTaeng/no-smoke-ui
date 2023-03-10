@@ -2,15 +2,16 @@
 .game-board {
     display: flex;
     flex-wrap: wrap;
-    width: 450px;
-    height: 450px;
+    width: 480px;
+    /* height: 450px; */
     margin: 0 auto;
   }
   .resource-buttons {
     display: flex;
     border: 1px solid black;
     border-radius: 5px;
-    width: 450px;
+    width: 480px;
+    padding: 0 50px;
   }
   .resource-buttons li{
     margin-left: 10px;
@@ -24,7 +25,7 @@
     font-size: 20px;
 
 
-    max-width: 100px;
+    width: 120px;
     height: 100px;
     border: 1px solid black;
 
