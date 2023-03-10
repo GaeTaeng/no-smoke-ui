@@ -4,12 +4,15 @@ import SEOMetaTag from "../../SEOMetaTag";
 import BullsAndCows from "./BullsAndCows/BullsAndCows";
 import GamesMenu from "./GamesMenu";
 import LandBuildings from "./LandBuilding.js/LandBuilding";
+import Ladder from "./LodderGame/Ladder";
+import LadderGame from "./LodderGame/LodderGame";
  
 
 
 const MENU_LIST = [
     {txt : "LandBuildings", component : <LandBuildings  />}, 
     {txt : "숫자야구게임", component : <BullsAndCows  />}, 
+    {txt : "사다리게임", component : <Ladder  />}, 
 ]
 
 export default function Games({ children }) { 

@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+ 
+import React, { Component, useEffect, useState } from 'react';
 import './LandBuilding.css';
 
 // Define constants for resources
@@ -98,32 +99,47 @@ const tileData = {
   },
 };
 
-class LandBuilding extends Component {
-  state = {
-    tiles: [
-      ['forest', 'lake', 'mountain'],
-      ['grassland', 'forest', 'lake'],
-      ['mountain', 'grassland', 'forest'],
-    ],
-    resources: {
-      [WOOD]: 0,
-      [STONE]: 0,
-      [FOOD]: 0,
-      [FISH]: 0,
-    },
-    population: [
-      {
-        id: 0,
-        job: UNEMPLOYED,
-      },
-    ],
-    clickedTile: null,
-  };
+const INIT_MAP = [
+  ['forest', 'lake', 'mountain'],
+  ['grassland', 'forest', 'lake'],
+  ['mountain', 'grassland', 'forest'],
+]
+export default function LandBuilding({}){
+  const [tileSize, setTileSize] = useState({x : 2, y : 3})
+  const [tiles, setTiles] = useState(INIT_MAP);
+  const [resources, setResources] = useState({
+    [WOOD]: 0,
+    [STONE]: 0,
+    [FOOD]: 0,
+    [FISH]: 0, 
+  })
 
+  const [population, setPopulation] = useState([
+    {
+      id: 0,
+      job: UNEMPLOYED,
+    },
+  ])
+
+  const [clickedTile, setClickedTile] = useState(null)
+
+  
+  useEffect(() => { 
+    // arr[5][2] (null로 초기화하여 생성)
+    const temp_tiles = Array.from(Array(tileSize.y), () => Array(tileSize.x).fill(null))
+
+    for (let i = 0; i < tileSize.y; i++) {
+      for (let j = 0; j < tileSize.x; j++) {
+        const type = Math.floor(Math.random() * Object.keys(tileData).length); 
+        temp_tiles[i][j] = Object.keys(tileData)[type];
+      } 
+    }
+    setTiles(temp_tiles);
+  }, [])
+  
   // Handle moving to a new tile
-  handleMove = (row, col) => {
-    const tile = this.state.tiles[row][col];
-    const resources = { ...this.state.resources };
+  const handleMove = (row, col) => {
+    const tile = tiles[row][col]; 
 
     // Update resources based on the new tile
     Object.keys(tileData[tile].resources).forEach(resource => {
@@ -131,31 +147,24 @@ class LandBuilding extends Component {
     });
 
     // Update the state with the new resources and clicked tile
-this.setState({
-    resources,
-    clickedTile: {
-    row,
-    col,
-    },
-    });
-    };
+    setResources(resources);
+    setClickedTile({row, col}); 
+  };
+ 
     
     // Handle assigning a job to a person
-    handleAssignJob = (personId, job) => {
-    const population = [...this.state.population];
+    const handleAssignJob = (personId, job) => { 
     const index = population.findIndex(person => person.id === personId);
 
     if (index >= 0) {
         population[index].job = job;
-        this.setState({ population });
+        setPopulation(population)
       }
     };
-
-    render() {
-    const { tiles, resources, population, clickedTile } = this.state;
-
+  
+console.log("tiles : ", tiles)
     return (
-        <div className="game">
+        <div className="game-board">
           <div className="sidebar">
             <h2>Resources:</h2>
             <ul>
@@ -174,7 +183,7 @@ this.setState({
                     {Object.keys(jobData)
                       .filter(job => job !== person.job)
                       .map(job => (
-                        <button key={job} onClick={() => this.handleAssignJob(person.id, job)}>
+                        <button key={job} onClick={() => handleAssignJob(person.id, job)}>
                           {jobData[job].name}
                         </button>
                       ))}
@@ -190,7 +199,7 @@ this.setState({
                   <div
                     key={colIndex}
                     className={`tile ${clickedTile && clickedTile.row === rowIndex && clickedTile.col === colIndex ? 'active' : ''}`}
-                    onClick={() => this.handleMove(rowIndex, colIndex)}
+                    onClick={() => handleMove(rowIndex, colIndex)}
                   >
                     <div className="tile-icon">{tileData[tile].icon}</div>
                     <div className="tile-name">{tileData[tile].name}</div>
@@ -200,8 +209,5 @@ this.setState({
             ))}
           </div>
         </div>
-      );
-    }
-}
-
-export default LandBuilding;
+      );  
+                }
