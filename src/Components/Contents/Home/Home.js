@@ -24,9 +24,6 @@ export default function Home({ children }) {
     return (
         <div className="home"> 
 
-            <div className="Description ">
-                기존 페이징 10개를 3개로 줄여서 표시줄 예정.    
-            </div>
         <Board boardList={boardList} is_preview={true}/>
         <Board boardList={boardList} is_preview={true}/>
         <Board boardList={boardList} is_preview={true}/>

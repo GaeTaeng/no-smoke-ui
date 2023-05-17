@@ -48,11 +48,11 @@ export default function Board({ children, type, is_preview, ...props }) {
       console.log("props : ", props)
     return (
         <div className={`board ${is_preview ? "boardpreview" : ""}`}> 
-            <SEOMetaTag title={"게시판"} description={"게시판"} imgsrc={"public/logo.png"} url={"https://gaetaeng.xyz/board"}/>
             {
                 is_preview ? <BoardPreview  boardList={boardList}/> :
                 <BoardListManagement boardList={boardList} />
             }    
+            <SEOMetaTag title={"게시판"} description={"게시판"} imgsrc={"public/logo.png"} url={"https://gaetaeng.xyz/board"}/>
         </div>
     )
 }
