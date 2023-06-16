@@ -15,6 +15,7 @@ import Setting from "./Contents/Setting/Setting";
 import Home from "./Contents/Home/Home"; 
 import BoardAdd from "./Contents/Board/BoardListManagement/BoardItem/BoardAdd";
 import Games from "./Contents/Games/Games";
+import ILoveYou from "./Contents/PlayGround/Toy/ILoveYou";
 function App() {
 
   useEffect(() => { 
@@ -41,6 +42,7 @@ function App() {
                 <Route path ="todo"  element={<Todo />}  /> 
                 <Route path ="setting"  element={<Setting />}  /> 
                 <Route path = "coffee" element={<IWillGoToCoffee />} /> 
+                <Route path = "iloveyou" element={<ILoveYou />} /> 
                 {/* <Route path ="profile/:userId"  element={<div>ㄲㄱ</div>} 
                 loader={({ params }) => {
                     console.log(params.userId); // "hotspur"

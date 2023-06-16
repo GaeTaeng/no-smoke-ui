@@ -11,7 +11,7 @@ import Ladder from "./LodderGame/Ladder";
 const MENU_LIST = [
     {txt : "LandBuildings", component : <LandBuildings  />}, 
     {txt : "숫자야구게임", component : <BullsAndCows  />}, 
-    {txt : "사다리게임", component : <Ladder  />},  
+    {txt : "사다리게임", component : <Ladder  />},   
 ]
 
 export default function Games({ children }) { 

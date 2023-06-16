@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 export default function GoogleAdvertise ({
   className = "adsbygoogle",
-  client = "",
+  client = "ca-pub-1845636451573321",
   slot = "",
   format = "",
   responsive = "",

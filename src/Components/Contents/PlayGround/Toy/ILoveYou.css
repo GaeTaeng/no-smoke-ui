@@ -1,0 +1,37 @@
+@keyframes blink-effect {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes ct {
+  25% {color: gold;}
+  50% {color: tomato;}
+  75% {color: #fff;}
+}
+@keyframes ct2 {
+     25% {color: tomato;}
+     50% {color: gold;}
+     75% {color: #333;}
+}
+.iloveyou {
+  border : 1px solid red;
+
+  margin : 50px;
+  padding : 50px;
+}
+
+
+.iloveyou .love_name {
+  font-size: 100px;
+  animation: blink-effect 500ms step-end infinite;
+  color: #333;
+  animation: ct 3s infinite;
+}
+
+
+.iloveyou .love_message {
+  font-size: 50px;
+  color: #fff;
+  animation: ct2 3s infinite;
+
+}
